@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:maranata_app/components/appbar_component.dart';
+import 'package:maranata_app/components/body_component.dart';
+import 'package:maranata_app/components/button_component.dart';
 import 'package:maranata_app/components/drawer_component.dart';
 
 class HomePage extends StatelessWidget {
@@ -47,7 +49,16 @@ class HomePage extends StatelessWidget {
         ],
       ),
       drawer: DrawerComponent(title: "Drawer", nameItem: "Item"),
-      body: Center(child: Text("Estrutura do app criado com sucesso 😀")),
+      body: BodyComponent(
+        child: Column(
+          children: [
+            ButtonComponent(
+              icon: Icon(Icons.book),
+              buttonText: "Bíblia",
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
