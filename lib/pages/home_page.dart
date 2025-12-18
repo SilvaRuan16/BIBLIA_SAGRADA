@@ -3,6 +3,7 @@ import 'package:maranata_app/components/appbar_component.dart';
 import 'package:maranata_app/components/body_component.dart';
 import 'package:maranata_app/components/button_component.dart';
 import 'package:maranata_app/components/drawer_component.dart';
+import 'package:maranata_app/config.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -19,7 +20,7 @@ class HomePage extends StatelessWidget {
             child: PopupMenuButton<String>(
               icon: Icon(
                 Icons.more_vert,
-                color: Colors.grey.shade100,
+                color: iconColor,
               ),
               onSelected: null,
               itemBuilder: (BuildContext context) {
@@ -58,7 +59,9 @@ class HomePage extends StatelessWidget {
                 width: MediaQuery.of(context).size.width * 0.8,
                 height: 120,
                 icon: Icon(Icons.book),
+                iconColor: iconColor,
                 buttonText: "Bíblia",
+                textColor: textColor,
                 onPressed: null,
               ),
             ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:maranata_app/config.dart';
 
 /**
  * Este arquivo representa um componente cujo será utilizado como o corpo base
@@ -13,13 +14,17 @@ class BodyComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: SizedBox(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        child: Padding(
-          padding: const EdgeInsetsGeometry.all(16.0),
-          child: child,
+    return Container(
+      width: double.infinity,
+      color: bodyColor,
+      child: SingleChildScrollView(
+        child: SizedBox(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          child: Padding(
+            padding: const EdgeInsetsGeometry.all(16.0),
+            child: child,
+          ),
         ),
       ),
     );

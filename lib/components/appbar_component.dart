@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:maranata_app/config.dart';
 
 class AppbarComponent extends StatelessWidget implements PreferredSizeWidget {
   const AppbarComponent({super.key, required this.title, this.actions});
@@ -9,10 +10,10 @@ class AppbarComponent extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.brown,
-      title: Text(title, style: TextStyle(color: Colors.grey.shade100)),
+      backgroundColor: appBarColor,
+      title: Text(title, style: TextStyle(color: textColor, fontSize: titleFontSize)),
       actions: [...actions ?? []],
-      iconTheme: IconThemeData(color: Colors.grey.shade100),
+      iconTheme: IconThemeData(color: iconColor),
       centerTitle: true,
     );
   }
