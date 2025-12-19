@@ -4,6 +4,7 @@ import 'package:maranata_app/components/body_component.dart';
 import 'package:maranata_app/components/button_component.dart';
 import 'package:maranata_app/components/drawer_component.dart';
 import 'package:maranata_app/components/column_component.dart';
+import 'package:maranata_app/config.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -18,7 +19,10 @@ class HomePage extends StatelessWidget {
             width: 100,
             height: 100,
             child: PopupMenuButton<String>(
-              icon: Icon(Icons.more_vert, color: Colors.grey.shade100),
+              icon: Icon(
+                Icons.more_vert,
+                color: iconColor,
+              ),
               onSelected: null,
               itemBuilder: (BuildContext context) {
                 return const [

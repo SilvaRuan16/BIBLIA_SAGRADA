@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:maranata_app/config.dart';
 
 class DrawerComponent extends StatelessWidget {
   const DrawerComponent({super.key});
@@ -14,7 +15,7 @@ class DrawerComponent extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: DrawerHeader(
-              decoration: BoxDecoration(color: Colors.brown),
+              decoration: BoxDecoration(color: bodyColor),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -37,7 +38,7 @@ class DrawerComponent extends StatelessWidget {
                   SizedBox(height: 10),
                   Text(
                     "Biblía Sagrada",
-                    style: TextStyle(color: Colors.white, fontSize: 20.0),
+                    style: TextStyle(color: textColor, fontSize: titleFontSize),
                   ),
                 ],
               ),
@@ -48,50 +49,50 @@ class DrawerComponent extends StatelessWidget {
               padding: EdgeInsets.zero,
               children: [
                 ListTile(
-                  leading: Icon(Icons.settings, color: Colors.black),
+                  leading: Icon(Icons.settings, color: iconColor),
                   title: Text(
                     "Configurações",
-                    style: TextStyle(color: Colors.black, fontSize: 20.0),
+                    style: TextStyle(color: textColor, fontSize: textFontSize),
                   ),
                   onTap: () {
                     Navigator.pop(context);
                   },
                 ),
                 ListTile(
-                  leading: Icon(Icons.info, color: Colors.black),
+                  leading: Icon(Icons.info, color: iconColor),
                   title: Text(
                     "Sobre o App",
-                    style: TextStyle(color: Colors.black, fontSize: 20.0),
+                    style: TextStyle(color: textColor, fontSize: textFontSize),
                   ),
                   onTap: () {
                     Navigator.pop(context);
                   },
                 ),
                 ListTile(
-                  leading: Icon(Icons.privacy_tip, color: Colors.black),
+                  leading: Icon(Icons.privacy_tip, color: iconColor),
                   title: Text(
                     "Politica de Privacidade",
-                    style: TextStyle(color: Colors.black, fontSize: 20.0),
+                    style: TextStyle(color: textColor, fontSize: textFontSize),
                   ),
                   onTap: () {
                     Navigator.pop(context);
                   },
                 ),
                 ListTile(
-                  leading: Icon(Icons.volunteer_activism, color: Colors.black),
+                  leading: Icon(Icons.volunteer_activism, color: iconColor),
                   title: Text(
                     "Contribuir com o App",
-                    style: TextStyle(color: Colors.black, fontSize: 20.0),
+                    style: TextStyle(color: textColor, fontSize: textFontSize),
                   ),
                   onTap: () {
                     Navigator.pop(context);
                   },
                 ),
                 ListTile(
-                  leading: Icon(Icons.help, color: Colors.black),
+                  leading: Icon(Icons.help, color: iconColor),
                   title: Text(
                     "Suporte",
-                    style: TextStyle(color: Colors.black, fontSize: 20.0),
+                    style: TextStyle(color: textColor, fontSize: textFontSize),
                   ),
                   onTap: () {
                     Navigator.pop(context);
@@ -104,7 +105,7 @@ class DrawerComponent extends StatelessWidget {
             padding: const EdgeInsets.only(bottom: 16.0),
             child: Text(
               "Versão: 1.0.0+1",
-              style: TextStyle(color: Colors.black, fontSize: 16.0),
+              style: TextStyle(color: textColor, fontSize: subTextFontSize),
               textAlign: TextAlign.center,
             ),
           ),

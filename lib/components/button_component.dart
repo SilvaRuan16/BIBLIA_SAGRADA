@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:maranata_app/config.dart';
 
 class ButtonComponent extends StatelessWidget {
   const ButtonComponent({
@@ -30,7 +31,7 @@ class ButtonComponent extends StatelessWidget {
       width: width ?? 150,
       height: height ?? 150,
       decoration: BoxDecoration(
-        color: backgroundColor ?? Colors.brown,
+        color: backgroundColor ?? buttonColor,
         borderRadius: BorderRadius.circular(20.0),
       ),
       child: ElevatedButton(
