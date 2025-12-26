@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:maranata_app/components/appbar_component.dart';
 import 'package:maranata_app/components/body_component.dart';
 import 'package:maranata_app/components/button_component.dart';
+import 'package:maranata_app/components/card_component.dart';
 import 'package:maranata_app/components/drawer_component.dart';
 import 'package:maranata_app/components/column_component.dart';
+import 'package:maranata_app/components/list_component.dart';
 import 'package:maranata_app/config.dart';
 
 class HomePage extends StatelessWidget {
@@ -13,16 +15,13 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppbarComponent(
-        title: 'Maranata',
+        title: 'Biblia livre',
         actions: [
           SizedBox(
             width: 100,
             height: 100,
             child: PopupMenuButton<String>(
-              icon: Icon(
-                Icons.more_vert,
-                color: iconColor,
-              ),
+              icon: Icon(Icons.more_vert, color: iconColor),
               onSelected: null,
               itemBuilder: (BuildContext context) {
                 return const [
@@ -46,14 +45,35 @@ class HomePage extends StatelessWidget {
       ),
       drawer: DrawerComponent(),
       body: BodyComponent(
-        child: ColumnComponent(
+        child: ListComponent(),
+        /**
+         *         child: ColumnComponent(
           children: [
-            Text('Deliver features faster'),
-            Text('Craft beautiful UIs'),
-            Icon(Icons.book),
-            ButtonComponent(buttonText: "Testando", onPressed: ()=>{}, )
+            CardComponent(
+              width: MediaQuery.of(context).size.width * 0.8,
+              height: 100.0,
+              backgroundColor: buttonColor,
+              children: [
+                Row(
+                  children: [
+                    Icon(Icons.book, size: 35.0, color: iconColor),
+                    Expanded(
+                      child: Text(
+                        "Bem vindo ao nosso app!",
+                        style: TextStyle(
+                          fontSize: titleFontSize,
+                          color: textColor,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            ButtonComponent(buttonText: "Testando", onPressed: () => {}),
           ],
         ),
+         */
       ),
     );
   }

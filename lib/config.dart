@@ -16,6 +16,12 @@ const double buttonFontSize = 20.0;
 
 // Cores
 const Color appBarColor = Color(0xffba7b0b);
+/**
+ * Color(0xff13120f); Preto fosco
+ * Color(0xff5490ca); Azul
+ * Color(0xff26231D); Marrom escuro
+ * Color(0xff0A0907); Preto forte
+ */
 const Color bodyColor = Color(0xff5490ca);
 const Color buttonColor = Color(0xffffef96);
 const Color textColor = Color(0xff000000);

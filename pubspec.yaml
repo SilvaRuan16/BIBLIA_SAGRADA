@@ -1,5 +1,5 @@
-name: maranata_app
-description: "A new Flutter project."
+name: biblia_sagrada
+description: "Aplicação MULTI-PLATAFORMA para fornecimento de conteúdo bíblico para as igrejas e uso pessoal. A proposta visa disponibilizar uma aplicação onde funcionará em dispositivos android, ios, web e desktop, onde será fornecido conteúdos da bíblia, harpas de diferentes igrejas cristãs, devocionais, palavra do dia, áudios. Como funcionalidade secundária, será fornecido atividades como suporte, avisos, configurações da aplicação, política de privacidade e contribuições voluntárias. O projeto seguirá a arquitetura de produção MVC + SERVICE e PROVIDER como gerenciamento de estado da aplicação."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -35,6 +35,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   flutter_svg: ^2.2.3
+  provider: ^6.1.5+1
 
 dev_dependencies:
   flutter_test:
