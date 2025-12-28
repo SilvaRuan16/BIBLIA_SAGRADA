@@ -1,8 +1,8 @@
-import 'package:biblia_sagrada/config.dart';
+
 import 'package:flutter/material.dart';
 
-class ButtonComponent extends StatelessWidget {
-  const ButtonComponent({
+class ButtonWidget extends StatelessWidget {
+  const ButtonWidget({
     super.key,
     this.icon,
     required this.buttonText,
@@ -31,7 +31,6 @@ class ButtonComponent extends StatelessWidget {
       width: width ?? 150,
       height: height ?? 150,
       decoration: BoxDecoration(
-        color: backgroundColor ?? buttonColor,
         borderRadius: BorderRadius.circular(20.0),
       ),
       child: ElevatedButton(

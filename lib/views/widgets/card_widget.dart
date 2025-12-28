@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CardComponent extends StatelessWidget {
-  const CardComponent({
+class CardWidget extends StatelessWidget {
+  const CardWidget({
     super.key,
     required this.children,
     required this.width,

@@ -1,9 +1,9 @@
-import 'package:biblia_sagrada/config.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class DrawerComponent extends StatelessWidget {
-  const DrawerComponent({super.key});
+class DrawerWidget extends StatelessWidget {
+  const DrawerWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,6 @@ class DrawerComponent extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: DrawerHeader(
-              decoration: BoxDecoration(color: bodyColor),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -38,7 +37,7 @@ class DrawerComponent extends StatelessWidget {
                   SizedBox(height: 10),
                   Text(
                     "Biblía Sagrada",
-                    style: TextStyle(color: textColor, fontSize: titleFontSize),
+                    style: TextStyle(fontSize: 24.0),
                   ),
                 ],
               ),
@@ -49,50 +48,50 @@ class DrawerComponent extends StatelessWidget {
               padding: EdgeInsets.zero,
               children: [
                 ListTile(
-                  leading: Icon(Icons.settings, color: iconColor),
+                  leading: Icon(Icons.settings),
                   title: Text(
                     "Configurações",
-                    style: TextStyle(color: textColor, fontSize: textFontSize),
+                    style: TextStyle(fontSize: 24.0),
                   ),
                   onTap: () {
                     Navigator.pop(context);
                   },
                 ),
                 ListTile(
-                  leading: Icon(Icons.info, color: iconColor),
+                  leading: Icon(Icons.info),
                   title: Text(
                     "Sobre o App",
-                    style: TextStyle(color: textColor, fontSize: textFontSize),
+                    style: TextStyle(fontSize: 24.0),
                   ),
                   onTap: () {
                     Navigator.pop(context);
                   },
                 ),
                 ListTile(
-                  leading: Icon(Icons.privacy_tip, color: iconColor),
+                  leading: Icon(Icons.privacy_tip),
                   title: Text(
                     "Politica de Privacidade",
-                    style: TextStyle(color: textColor, fontSize: textFontSize),
+                    style: TextStyle(fontSize: 24.0),
                   ),
                   onTap: () {
                     Navigator.pop(context);
                   },
                 ),
                 ListTile(
-                  leading: Icon(Icons.volunteer_activism, color: iconColor),
+                  leading: Icon(Icons.volunteer_activism),
                   title: Text(
                     "Contribuir com o App",
-                    style: TextStyle(color: textColor, fontSize: textFontSize),
+                    style: TextStyle(fontSize: 24.0),
                   ),
                   onTap: () {
                     Navigator.pop(context);
                   },
                 ),
                 ListTile(
-                  leading: Icon(Icons.help, color: iconColor),
+                  leading: Icon(Icons.help),
                   title: Text(
                     "Suporte",
-                    style: TextStyle(color: textColor, fontSize: textFontSize),
+                    style: TextStyle(fontSize: 24.0),
                   ),
                   onTap: () {
                     Navigator.pop(context);
@@ -105,7 +104,7 @@ class DrawerComponent extends StatelessWidget {
             padding: const EdgeInsets.only(bottom: 16.0),
             child: Text(
               "Versão: 1.0.0+1",
-              style: TextStyle(color: textColor, fontSize: subTextFontSize),
+              style: TextStyle(fontSize: 20.0),
               textAlign: TextAlign.center,
             ),
           ),
